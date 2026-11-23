@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Program.cs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #6c95eb;}
+.s1 { color: #d0d0d0;}
+.s2 { color: #bdbdbd;}
+.s3 { color: #c9a26d;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Program.cs</font>
+</center></td></tr></table>
+<pre><span class="s0">using </span><span class="s1">System</span><span class="s2">;</span>
+<span class="s0">using </span><span class="s1">Gerenciador_de_Escola</span><span class="s2">.</span><span class="s1">_02___Servico</span><span class="s2">;</span>
+
+<span class="s0">namespace </span><span class="s1">Gerenciador_de_Escola</span><span class="s2">;</span>
+
+<span class="s0">class </span><span class="s1">Program</span>
+<span class="s2">{</span>
+    <span class="s0">static void </span><span class="s1">Main</span><span class="s2">(</span><span class="s0">string</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">)</span>
+    <span class="s2">{</span>
+        <span class="s0">string </span><span class="s1">opcao</span><span class="s2">;</span>
+        <span class="s1">ServicoAlunos servicoAlunos </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ServicoAlunos</span><span class="s2">();</span>
+
+        <span class="s0">do</span>
+        <span class="s2">{</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;=== MENU ===&quot;</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;1 - Cadastrar Aluno&quot;</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;2 - Consultar Aluno&quot;</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;3 - Deletar Aluno&quot;</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;4 - Sair&quot;</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">Write</span><span class="s2">(</span><span class="s3">&quot;\nEscolha uma opção: &quot;</span><span class="s2">);</span>
+
+            <span class="s1">opcao </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+            <span class="s0">switch </span><span class="s2">(</span><span class="s1">opcao</span><span class="s2">)</span>
+            <span class="s2">{</span>
+                <span class="s0">case </span><span class="s3">&quot;1&quot;</span><span class="s1">:</span>
+                    <span class="s1">AdicionarAluno</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">&quot;2&quot;</span><span class="s1">:</span>
+                    <span class="s1">ConsultarAluno</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">&quot;3&quot;</span><span class="s1">:</span>
+                    <span class="s1">DeletarAluno</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s0">case </span><span class="s3">&quot;4&quot;</span><span class="s1">:</span>
+                    <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;\nSaindo do programa...&quot;</span><span class="s2">);</span>
+                    <span class="s1">Console</span><span class="s2">.</span><span class="s1">Clear</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+                <span class="s1">default:</span>
+                    <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;\nOpção inválida! Pressione ENTER para tentar novamente.&quot;</span><span class="s2">);</span>
+                    <span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadKey</span><span class="s2">();</span>
+                    <span class="s1">Console</span><span class="s2">.</span><span class="s1">Clear</span><span class="s2">();</span>
+                    <span class="s0">break</span><span class="s2">;</span>
+            <span class="s2">}</span>
+        <span class="s2">} </span><span class="s0">while </span><span class="s2">(</span><span class="s1">opcao </span><span class="s2">!= </span><span class="s3">&quot;4&quot;</span><span class="s2">);</span>
+
+        <span class="s0">void </span><span class="s1">AdicionarAluno</span><span class="s2">()</span>
+        <span class="s2">{</span>
+            <span class="s0">try</span>
+            <span class="s2">{</span>
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite o nome do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">string </span><span class="s1">nome </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite o email do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">string </span><span class="s1">email </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite o telefone do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">string </span><span class="s1">telefone </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite a cpf do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">string </span><span class="s1">cpf </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite o Curso: &quot;</span><span class="s2">);</span>
+                <span class="s0">string </span><span class="s1">curso </span><span class="s2">= </span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">();</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite a matrícula do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">int </span><span class="s1">matricula </span><span class="s2">= </span><span class="s0">int</span><span class="s2">.</span><span class="s1">Parse</span><span class="s2">(</span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">());</span>
+
+                <span class="s0">string </span><span class="s1">msgRetorno </span><span class="s2">= </span><span class="s1">servicoAlunos</span><span class="s2">.</span><span class="s1">Adicionar</span><span class="s2">(</span><span class="s1">nome</span><span class="s2">, </span><span class="s1">email</span><span class="s2">, </span><span class="s1">telefone</span><span class="s2">, </span><span class="s1">cpf</span><span class="s2">, </span><span class="s1">curso</span><span class="s2">, </span><span class="s1">matricula</span><span class="s2">);</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s1">msgRetorno</span><span class="s2">);</span>
+            <span class="s2">}</span>
+            <span class="s0">catch </span><span class="s2">(</span><span class="s1">FormatException ex</span><span class="s2">)</span>
+            <span class="s2">{</span>
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;O valor digitado não é um número&quot;</span><span class="s2">);</span>
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s1">ex</span><span class="s2">.</span><span class="s1">Message</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+
+
+        <span class="s0">void </span><span class="s1">ConsultarAluno</span><span class="s2">()</span>
+        <span class="s2">{</span>
+            <span class="s0">try</span>
+            <span class="s2">{</span>
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite a matrícula do aluno: &quot;</span><span class="s2">);</span>
+                <span class="s0">int </span><span class="s1">matricula </span><span class="s2">= </span><span class="s0">int</span><span class="s2">.</span><span class="s1">Parse</span><span class="s2">(</span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">());</span>
+
+                <span class="s0">string </span><span class="s1">msgRetorno </span><span class="s2">= </span><span class="s1">servicoAlunos</span><span class="s2">.</span><span class="s1">Consultar</span><span class="s2">(</span><span class="s1">matricula</span><span class="s2">);</span>
+
+                <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s1">msgRetorno</span><span class="s2">);</span>
+            <span class="s2">}</span>
+            <span class="s0">catch</span>
+            <span class="s2">{</span>
+
+            <span class="s2">}</span>
+
+        <span class="s2">}</span>
+
+        <span class="s0">void </span><span class="s1">DeletarAluno</span><span class="s2">()</span>
+        <span class="s2">{</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s3">&quot;Digite a matrícula do aluno: &quot;</span><span class="s2">);</span>
+            <span class="s0">int </span><span class="s1">matricula </span><span class="s2">= </span><span class="s0">int</span><span class="s2">.</span><span class="s1">Parse</span><span class="s2">(</span><span class="s1">Console</span><span class="s2">.</span><span class="s1">ReadLine</span><span class="s2">());</span>
+
+            <span class="s0">string </span><span class="s1">msgRetorno </span><span class="s2">= </span><span class="s1">servicoAlunos</span><span class="s2">.</span><span class="s1">Deletar</span><span class="s2">(</span><span class="s1">matricula</span><span class="s2">);</span>
+            <span class="s1">Console</span><span class="s2">.</span><span class="s1">WriteLine</span><span class="s2">(</span><span class="s1">msgRetorno</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

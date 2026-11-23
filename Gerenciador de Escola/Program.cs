@@ -1,4 +1,5 @@
-﻿using Gerenciador_de_Escola._02___Servico;
+﻿using System;
+using Gerenciador_de_Escola._02___Servico;
 
 namespace Gerenciador_de_Escola;
 
@@ -17,7 +18,7 @@ class Program
             Console.WriteLine("3 - Deletar Aluno");
             Console.WriteLine("4 - Sair");
             Console.Write("\nEscolha uma opção: ");
-            
+
             opcao = Console.ReadLine();
 
             switch (opcao)
@@ -33,10 +34,9 @@ class Program
                     break;
                 case "4":
                     Console.WriteLine("\nSaindo do programa...");
-                    Console.Clear();
                     break;
                 default:
-                    Console.WriteLine("\nOpção inválida! Pressione ENTER para tentar novamente.");
+                    Console.WriteLine("\nOpção inválida! Pressione qualquer tecla para tentar novamente.");
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -45,46 +45,80 @@ class Program
 
         void AdicionarAluno()
         {
-            Console.WriteLine("Digite o nome do aluno: ");
-            string nome = Console.ReadLine();
-            
-            Console.WriteLine("Digite o email do aluno: ");
-            string email = Console.ReadLine();
-            
-            Console.WriteLine("Digite o telefone do aluno: ");
-            string telefone = Console.ReadLine();
-            
-            Console.WriteLine("Digite a cpf do aluno: ");
-            string cpf = Console.ReadLine();
-                    
-            Console.WriteLine("Digite o Curso: ");
-            string curso = Console.ReadLine();
-                    
-            Console.WriteLine("Digite a matrícula do aluno: ");
-            int matricula = int.Parse(Console.ReadLine());
-            
-            string msgRetorno = servicoAlunos.Adicionar(nome, email, telefone, cpf, curso, matricula);
-            
-            Console.WriteLine(msgRetorno);
+            try
+            {
+                Console.WriteLine("Digite o nome do aluno: ");
+                string nome = Console.ReadLine();
+
+                Console.WriteLine("Digite o email do aluno: ");
+                string email = Console.ReadLine();
+
+                Console.WriteLine("Digite o telefone do aluno: ");
+                string telefone = Console.ReadLine();
+
+                Console.WriteLine("Digite o cpf do aluno: ");
+                string cpf = Console.ReadLine();
+
+                Console.WriteLine("Digite o Curso: ");
+                string curso = Console.ReadLine();
+
+                Console.WriteLine("Digite a matrícula do aluno: ");
+                int matricula = int.Parse(Console.ReadLine());
+
+                string msgRetorno = servicoAlunos.Adicionar(nome, email, telefone, cpf, curso, matricula);
+
+                Console.WriteLine(msgRetorno);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Erro: digite apenas números na matrícula.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro: " + ex.Message);
+            }
         }
-        
+
         void ConsultarAluno()
         {
-            Console.WriteLine("Digite a matrícula do aluno: ");
-            int matricula = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Digite a matrícula do aluno: ");
+                int matricula = int.Parse(Console.ReadLine());
 
-            string msgRetorno = servicoAlunos.Consultar(matricula);
-            
-            Console.WriteLine(msgRetorno);
+                string msgRetorno = servicoAlunos.Consultar(matricula);
+
+                Console.WriteLine(msgRetorno);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Erro: digite apenas números na matrícula.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro: " + ex.Message);
+            }
         }
-        
+
         void DeletarAluno()
         {
-            Console.WriteLine("Digite a matrícula do aluno: ");
-            int matricula = int.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Digite a matrícula do aluno: ");
+                int matricula = int.Parse(Console.ReadLine());
 
-            string msgRetorno = servicoAlunos.Deletar(matricula);
-            Console.WriteLine(msgRetorno);
+                string msgRetorno = servicoAlunos.Deletar(matricula);
+
+                Console.WriteLine(msgRetorno);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Erro: digite apenas números na matrícula.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro: " + ex.Message);
+            }
         }
     }
 }

@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.AssemblyInfo.cs
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.sourcelink.json
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\bin\Debug\net10.0\Gerenciador de Escola.exe
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\bin\Debug\net10.0\Gerenciador de Escola.deps.json
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\bin\Debug\net10.0\Gerenciador de Escola.runtimeconfig.json
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\bin\Debug\net10.0\Gerenciador de Escola.dll
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\bin\Debug\net10.0\Gerenciador de Escola.pdb
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.dll
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\refint\Gerenciador de Escola.dll
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.pdb
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\Gerenciador de Escola.genruntimeconfig.cache
+C:\Users\User\Desktop\aula poo\Aula_POO_CESAR_Gerenciador_de_Escola\Gerenciador de Escola\obj\Debug\net10.0\ref\Gerenciador de Escola.dll
